@@ -1,0 +1,75 @@
+#include <iostream>
+using namespace std;
+
+void calcularIntensidadCampo(double F, double q)
+{
+	if (q != 0)
+	{
+		double E = F / q;
+		cout << "La intensidad del campo eléctrico es: " << E << " N/C" << endl;
+	}
+	else
+	{
+		cout << "La carga no puede ser cero." << endl;
+	}
+}
+
+void calcularFuerza(double E, double q)
+{
+	double F = E * q;
+	cout << "La fuerza electrica es: " << F << " N" << endl;
+}
+
+void calcularCarga(double F, double E)
+{
+	if (E != 0)
+	{
+		double q = F / E;
+		cout << "La carga electrica es: " << q << " C" << endl;
+	}
+	else
+	{
+		cout << "La intensidad del campo electrico no puede ser cero." << endl;
+	}
+}
+
+int main()
+{
+	double F, E, q;
+	int opcion;
+
+	cout << "Seleccione la operacion a realizar:" << endl;
+	cout << "1. Calcular intensidad del campo electrico (E)" << endl;
+	cout << "2. Calcular fuerza electrica (F)" << endl;
+	cout << "3. Calcular carga electrica (q)" << endl;
+	cin >> opcion;
+
+	switch (opcion)
+	{
+	case 1:
+		cout << "Ingrese la fuerza electrica (F) en Newtons: ";
+		cin >> F;
+		cout << "Ingrese la carga electrica (q) en Coulombs: ";
+		cin >> q;
+		calcularIntensidadCampo(F, q);
+		break;
+	case 2:
+		cout << "Ingrese la intensidad del campo electrico (E) en N/C: ";
+		cin >> E;
+		cout << "Ingrese la carga electrica (q) en Coulombs: ";
+		cin >> q;
+		calcularFuerza(E, q);
+		break;
+	case 3:
+		cout << "Ingrese la fuerza electrica (F) en Newtons: ";
+		cin >> F;
+		cout << "Ingrese la intensidad del campo electrico (E) en N/C: ";
+		cin >> E;
+		calcularCarga(F, E);
+		break;
+	default:
+		cout << "Opción no válida." << endl;
+	}
+
+	return 0;
+}

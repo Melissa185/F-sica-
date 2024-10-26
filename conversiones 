@@ -1,0 +1,230 @@
+#include <iostream>
+using namespace std;
+
+// Funciones para conversiones de corriente eléctrica
+double kiloamperiosAAmperios(double kA) {
+    return kA * 1000;
+}
+
+double miliamperiosAAmperios(double mA) {
+    return mA / 1000;
+}
+
+double microamperiosAAmperios(double uA) {
+    return uA / 1000000;
+}
+
+double miliamperiosAMicroamperios(double mA) {
+    return mA * 1000;
+}
+
+double amperiosAMiliamperios(double A) {
+    return A * 1000;
+}
+
+double miliamperiosAKiloamperios(double mA) {
+    return mA / 1000000;
+}
+
+double microamperiosAKiloamperios(double uA) {
+    return uA / 1000000000;
+}
+
+double amperiosAKiloamperios(double A) {
+    return A / 1000;
+}
+
+// Funciones para conversiones de voltaje
+double kilovoltiosAVoltios(double kV) {
+    return kV * 1000;
+}
+
+double milivoltiosAVoltios(double mV) {
+    return mV / 1000;
+}
+
+double microvoltiosAVoltios(double uV) {
+    return uV / 1000000;
+}
+
+double milivoltiosAMicrovoltios(double mV) {
+    return mV * 1000;
+}
+
+double voltiosAMilivoltios(double V) {
+    return V * 1000;
+}
+
+double microvoltiosAKilovoltios(double uV) {
+    return uV / 1000000000;
+}
+
+double voltiosAKilovoltios(double V) {
+    return V / 1000;
+}
+
+// Funciones para conversiones de resistencia
+double kiloohmiosAOhmios(double kOhm) {
+    return kOhm * 1000;
+}
+
+double miliohmiosAOhmios(double mOhm) {
+    return mOhm / 1000;
+}
+
+double microohmiosAOhmios(double uOhm) {
+    return uOhm / 1000000;
+}
+
+double miliohmiosAMicroohmios(double mOhm) {
+    return mOhm * 1000;
+}
+
+double ohmiosAMiliohmios(double Ohm) {
+    return Ohm * 1000;
+}
+
+double miliohmiosAKiloohmios(double mOhm) {
+    return mOhm / 1000000;
+}
+
+double microohmiosAKiloohmios(double uOhm) {
+    return uOhm / 1000000000;
+}
+
+double ohmiosAKiloohmios(double Ohm) {
+    return Ohm / 1000;
+}
+
+int main() {
+    int opcion;
+    double valor, resultado;
+
+    cout << "Seleccione el tipo de conversión:" << endl;
+    cout << "1. kA a A" << endl;
+    cout << "2. mA a A" << endl;
+    cout << "3. uA a A" << endl;
+    cout << "4. mA a uA" << endl;
+    cout << "5. A a mA" << endl;
+    cout << "6. mA a kA" << endl;
+    cout << "7. uA a kA" << endl;
+    cout << "8. A a kA" << endl;
+    cout << "9. kV a V" << endl;
+    cout << "10. mV a V" << endl;
+    cout << "11. uV a V" << endl;
+    cout << "12. mV a uV" << endl;
+    cout << "13. V a mV" << endl;
+    cout << "14. uV a kV" << endl;
+    cout << "15. V a kV" << endl;
+    cout << "16. kOhm a Ohm" << endl;
+    cout << "17. mOhm a Ohm" << endl;
+    cout << "18. uOhm a Ohm" << endl;
+    cout << "19. mOhm a uOhm" << endl;
+    cout << "20. Ohm a mOhm" << endl;
+    cout << "21. mOhm a kOhm" << endl;
+    cout << "22. uOhm a kOhm" << endl;
+    cout << "23. Ohm a kOhm" << endl;
+    cin >> opcion;
+
+    cout << "Ingrese el valor a convertir: ";
+    cin >> valor;
+
+    switch(opcion) {
+        case 1:
+            resultado = kiloamperiosAAmperios(valor);
+            cout << valor << " kA son " << resultado << " A." << endl;
+            break;
+        case 2:
+            resultado = miliamperiosAAmperios(valor);
+            cout << valor << " mA son " << resultado << " A." << endl;
+            break;
+        case 3:
+            resultado = microamperiosAAmperios(valor);
+            cout << valor << " uA son " << resultado << " A." << endl;
+            break;
+        case 4:
+            resultado = miliamperiosAMicroamperios(valor);
+            cout << valor << " mA son " << resultado << " uA." << endl;
+            break;
+        case 5:
+            resultado = amperiosAMiliamperios(valor);
+            cout << valor << " A son " << resultado << " mA." << endl;
+            break;
+        case 6:
+            resultado = miliamperiosAKiloamperios(valor);
+            cout << valor << " mA son " << resultado << " kA." << endl;
+            break;
+        case 7:
+            resultado = microamperiosAKiloamperios(valor);
+            cout << valor << " uA son " << resultado << " kA." << endl;
+            break;
+        case 8:
+            resultado = amperiosAKiloamperios(valor);
+            cout << valor << " A son " << resultado << " kA." << endl;
+            break;
+        case 9:
+            resultado = kilovoltiosAVoltios(valor);
+            cout << valor << " kV son " << resultado << " V." << endl;
+            break;
+        case 10:
+            resultado = milivoltiosAVoltios(valor);
+            cout << valor << " mV son " << resultado << " V." << endl;
+            break;
+        case 11:
+            resultado = microvoltiosAVoltios(valor);
+            cout << valor << " uV son " << resultado << " V." << endl;
+            break;
+        case 12:
+            resultado = milivoltiosAMicrovoltios(valor);
+            cout << valor << " mV son " << resultado << " uV." << endl;
+            break;
+        case 13:
+            resultado = voltiosAMilivoltios(valor);
+            cout << valor << " V son " << resultado << " mV." << endl;
+            break;
+        case 14:
+            resultado = microvoltiosAKilovoltios(valor);
+            cout << valor << " uV son " << resultado << " kV." << endl;
+            break;
+        case 15:
+            resultado = voltiosAKilovoltios(valor);
+            cout << valor << " V son " << resultado << " kV." << endl;
+            break;
+        case 16:
+            resultado = kiloohmiosAOhmios(valor);
+            cout << valor << " kOhm son " << resultado << " Ohm." << endl;
+            break;
+        case 17:
+            resultado = miliohmiosAOhmios(valor);
+            cout << valor << " mOhm son " << resultado << " Ohm." << endl;
+            break;
+        case 18:
+            resultado = microohmiosAOhmios(valor);
+            cout << valor << " uOhm son " << resultado << " Ohm." << endl;
+            break;
+        case 19:
+            resultado = miliohmiosAMicroohmios(valor);
+            cout << valor << " mOhm son " << resultado << " uOhm." << endl;
+            break;
+        case 20:
+            resultado = ohmiosAMiliohmios(valor);
+            cout << valor << " Ohm son " << resultado << " mOhm." << endl;
+            break;
+        case 21:
+            resultado = miliohmiosAKiloohmios(valor);
+            cout << valor << " mOhm son " << resultado << " kOhm." << endl;
+            break;
+        case 22:
+            resultado = microohmiosAKiloohmios(valor);
+            cout << valor << " uOhm son " << resultado << " kOhm." << endl;
+            break;
+        case 23:
+            resultado = ohmiosAKiloohmios(valor);
+            cout << valor << " Ohm son " << resultado << " kOhm." << endl;
+            break;
+        default:
+            cout << "Opción no válida." << endl;
+    }
+
+    return 0;
+}

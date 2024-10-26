@@ -1,0 +1,48 @@
+#include <iostream>
+#include <cmath> 
+using namespace std; 
+
+const double k = 9*10^9; 
+
+int main() {
+    int opcion;
+    cout << "Seleccione la opción de cálculo: 1 para fuerza, 2 para carga, 3 para distancia: ";
+    cin >> opcion;
+    if (opcion == 1) {
+        double q1, q2, d, F;
+        cout << "Ingrese la magnitud de la primera carga (q1) en Coulombs: ";
+        cin >> q1;
+        cout << "Ingrese la magnitud de la segunda carga (q2) en Coulombs: ";
+        cin >> q2;
+        cout << "Ingrese la distancia entre las cargas (d) en metros: ";
+        cin >> d;
+        F = k * abs(q1 * q2) / (d * d);
+        string direccion = (q1 * q2 > 0) ? "Repulsiva" : "Atractiva";
+        cout << "La magnitud de la fuerza electrostática es: " << F << " Newtons" << endl;
+        cout << "La dirección de la fuerza es: " << direccion << endl;
+    } else if (opcion == 2) {
+        double F, q2, d, q1;
+        cout << "Ingrese la fuerza electrostática (F) en Newtons: ";
+        cin >> F;
+        cout << "Ingrese la magnitud de la segunda carga (q2) en Coulombs: ";
+        cin >> q2;
+        cout << "Ingrese la distancia entre las cargas (d) en metros: ";
+        cin >> d;
+        q1 = F * d * d / (k * abs(q2));
+        cout << "La magnitud de la carga q1 es: " << q1 << " Coulombs" << endl;
+    } else if (opcion == 3) {
+        double F, q1, q2, d;
+        cout << "Ingrese la fuerza electrostática (F) en Newtons: ";
+        cin >> F;
+        cout << "Ingrese la magnitud de la primera carga (q1) en Coulombs: ";
+        cin >> q1;
+        cout << "Ingrese la magnitud de la segunda carga (q2) en Coulombs: ";
+        cin >> q2;
+        d= sqrt(k * abs(q1 * q2) / F);
+        cout << "La distancia entre las cargas es: " << d << " metros" << endl;
+    } else {
+        cout << "Opción no válida." << endl;
+    }
+
+    return 0;
+}
